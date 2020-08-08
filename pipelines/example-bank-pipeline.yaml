@@ -13,16 +13,11 @@ spec:
     - name: ui-image
       type: image
   tasks:
-    - name: code-analysis
+    - name: maven
       params:
         - name: GOALS
           value:
             - install
-            - 'sonar:sonar'
-            - '-Dsonar.host.url=http://sonarqube:9000'
-            - '-Dsonar.userHome=/tmp/sonar'
-            - '-DskipITs'
-            - '-Darguments=-DskipITs'
       resources:
         inputs:
           - name: source
@@ -49,7 +44,7 @@ spec:
           - name: image
             resource: transaction-image
       runAfter:
-        - code-analysis
+        - maven
       taskRef:
         kind: Task
         name: s2i-java-8
@@ -69,7 +64,7 @@ spec:
           - name: image
             resource: user-image
       runAfter:
-        - code-analysis
+        - maven
       taskRef:
         kind: Task
         name: s2i-java-8
@@ -85,7 +80,7 @@ spec:
           - name: image
             resource: ui-image
       runAfter:
-        - code-analysis
+        - maven
       taskRef:
         kind: Task
         name: s2i-nodejs
