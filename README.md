@@ -112,7 +112,7 @@ The steps to use the Tekton pipelines [here.](https://developer.ibm.com/tutorial
 
 Create an [App ID](https://cloud.ibm.com/catalog/services/app-id) instance. Once created, do the following to configure the instance for this pattern.
 
-**Note** The `.env.template` file referred to in the instructions is part of the code available in GitHub after running `git clone https://github.com/IBM/example-bank.git`. 
+**Note** The `.env.template` file referred to in the instructions is part of the code available in GitHub after running `git clone https://github.com/lubuxnl/example-bank.git`. 
 
 * Allow Sign-up and Sign-in using username and password by going to the tab `Cloud Directory` > `Settings`
 
@@ -267,7 +267,7 @@ The user and transaction services manage registered users and transactions using
 - Check out the code for all services.
 
 ```
-git clone https://github.com/IBM/example-bank.git
+git clone https://github.com/lubuxnl/example-bank.git
 cd bank-app-backend
 ```
 
